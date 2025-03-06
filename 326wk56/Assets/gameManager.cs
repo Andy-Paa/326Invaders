@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     void UpdateScore(int points)
     {
         score += points;
+        AudioManager.instance.PlayScoreSound();
         scoreText.text = $"Score: {score:D4}";
 
         if (score > highScore)

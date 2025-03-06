@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3220479217384195159}
   - component: {fileID: 2688246304073821596}
   - component: {fileID: 2268449341424673821}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8125335893176967482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootingOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}

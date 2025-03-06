@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
             lastShotTime = Time.time;
             GameObject shot = Instantiate(bulletPrefab, shottingOffset.position, Quaternion.identity);
             Debug.Log("Bang!");
+            AudioManager.instance.PlayShootSound();
             Destroy(shot, 4f);
 
             animator.SetTrigger("Shoot"); // 触发射击动画
@@ -29,7 +30,19 @@ public class Player : MonoBehaviour
         // 移动逻辑
         float move = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         Vector3 newPosition = transform.position + new Vector3(move, 0, 0);
-        newPosition.x = Mathf.Clamp(newPosition.x, -3f, 3f); // 限制玩家在 x 轴的范围
+        newPosition.x = Mathf.Clamp(newPosition.x, -5f, 5f); // 限制玩家在 x 轴的范围
         transform.position = newPosition;
+
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject)
+        {
+            Debug.Log("F!");
+
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Time.timeScale = 0; // 暂停游戏
+        }
     }
 }
