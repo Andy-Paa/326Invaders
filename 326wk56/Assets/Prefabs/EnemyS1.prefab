@@ -44,9 +44,8 @@ GameObject:
   - component: {fileID: 4988884264498715822}
   - component: {fileID: -4083805432981463857}
   - component: {fileID: 6146736084987422662}
-  - component: {fileID: -2048152900511515492}
   m_Layer: 7
-  m_Name: Enemy 2
+  m_Name: EnemyS1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,12 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796aad014e2107342a60ed88af81c745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 50
+  scoreValue: 10
   bulletPrefab: {fileID: 2457785739244962049, guid: 1286510225ae4d14c9b977047975389e, type: 3}
   shootingOffset: {fileID: 7247735404243366597}
-  minShootInterval: 10
+  minShootInterval: 20
   maxShootInterval: 20
-  animator: {fileID: -7674041265859570468, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
 --- !u!23 &-4083805432981463857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -155,7 +153,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8311a731ceb1af4985ed97fdcf1c81d, type: 2}
+  - {fileID: 2100000, guid: 4bfc6061e69ca3d4087cb0f7d47fe247, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,25 +183,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483517710255911465}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &-2048152900511515492
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7483517710255911465}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c02d196a30fbc2a41a99a14dab38d715, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
